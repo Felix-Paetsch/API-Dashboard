@@ -5,23 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/fontawesome/main.css">
+    <link rel="stylesheet" href="/fonts/fontawesome/main.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Playwrite+CU:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <main>
         <h1>Dashboard</h1>
         <p>Monitor your API endpoints.</p>
         <div id="dashboard_flex">
-            <div class="table_panel"></div>
+            <div class="table_panel panel_frontside">
+                <div class="top_flex">
+                    <h3>Hello</h3><i class="fa-regular fa-gear"></i>
+                </div>
+                <div class="canvas_wrapper">
+                    <canvas id="canvas_panel_1"></canvas>
+                </div>
+            </div>
+            <div class="table_panel panel_backside">
+                <div class="input_row">
+                    <span>Name: </span><input type="text" name="name" id="" value="API Name">
+                </div>
+                <div class="input_row">
+                    <span>Route: </span><input type="text" name="route" id="" value="/v2/url">
+                </div>
+                <div class="input_row">
+                    <span>Method: </span><input type="text" name="method" id="" value="GET">
+                </div>
+                <div class="input_row">
+                    <span>Processor: </span><select name="processor">
+                        <option value="option1">V1</option>
+                        <option value="option2">V2</option>
+                        <option value="option3">V3</option>
+                      </select>                      
+                </div>
+                <div class="input_row btn_row">
+                    <div>Return</div>
+                    <div class="apply_btn">Apply</div>
+                </div>
+            </div>
             <div id="add_board" class="table_panel">
                 <i class="fa-regular fa-plus"></i>
             </div>
         </div>
     </main>
+
+    <script>
+        const ctx = document.getElementById('canvas_panel_1');
+      
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            datasets: [{
+              label: '# of Votes',
+              data: [12, 19, 3, 5, 2, 3],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      </script>
 
     <script src="/js/tools/hot_reload.js"></script>
 </body>

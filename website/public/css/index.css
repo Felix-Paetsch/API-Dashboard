@@ -13,23 +13,25 @@ main {
   border-radius: 2rem;
   background-color: #0D0A0B;
   min-height: calc(100vh - 8rem);
-  padding: 1em 3em;
+  padding: 1rem 3rem;
 }
 
 #dashboard_flex {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 2em;
-  padding-bottom: 2em;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .table_panel {
-  min-height: 20em;
-  min-width: 25em;
+  color: #0D0A0B;
+  min-height: 20rem;
+  min-width: 25rem;
   background-color: #EFD6AC;
-  border-radius: 1em;
-  margin-right: 2em;
+  border-radius: 1rem;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
 }
 
 #add_board {
@@ -43,4 +45,67 @@ main {
   color: #0D0A0B;
   font-size: 8em;
   text-align: center;
+}
+
+.panel_backside {
+  padding-top: 1.5rem;
+  background-color: #f0c883;
+}
+
+.panel_backside .input_row {
+  display: flex;
+  flex-direction: row;
+  margin: 0.5rem 0 0 2rem;
+}
+
+.panel_backside .input_row span {
+  display: inline-block;
+  min-width: 6rem;
+}
+
+.panel_backside .btn_row {
+  margin-top: 2rem;
+}
+
+.panel_backside .btn_row div {
+  padding: 0.5rem 1rem;
+  background-color: #0D0A0B;
+  color: white;
+  border-radius: 0.5rem;
+  text-align: center;
+  width: 5.5rem;
+  cursor: pointer;
+}
+
+.panel_backside .btn_row .apply_btn {
+  margin-left: 0.5rem;
+}
+
+.panel_frontside {
+  padding: 1rem 1.2rem 1rem 1.2rem;
+}
+
+.panel_frontside .top_flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5rem 0 0.5rem 0;
+  margin-bottom: 0.5rem;
+}
+
+.panel_frontside h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.panel_frontside .canvas_wrapper {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.8rem;
+  border: 0.1rem solid #0D0A0B;
+}
+
+.panel_frontside .top_flex i {
+  font-size: 1.5rem;
+  cursor: pointer;
 }
