@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "compression": "^1.7.5",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "sass": "^1.81.0"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.js --ext js,css,ejs,scss"
+  }
+}
